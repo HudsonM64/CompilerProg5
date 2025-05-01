@@ -1,0 +1,2 @@
+Use "javac -g */*.java" to compile and "java Translate.Main test.tig" to test Translate.
+Not implented: type declaration and function declaration
