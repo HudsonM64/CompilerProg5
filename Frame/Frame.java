@@ -1,6 +1,6 @@
 package Frame;
 
-public abstract class Frame {
+public abstract class Frame implements Temp.TempMap {
   public Temp.Label name;
   public AccessList formals;
   abstract public Frame newFrame(Symbol.Symbol name, Util.BoolList formals);
@@ -13,4 +13,8 @@ public abstract class Frame {
   abstract public String string(Temp.Label label, String value);
   abstract public Temp.Label badPtr();
   abstract public Temp.Label badSub();
+  abstract public Assem.InstrList procEntryExit2(Assem.InstrList body);
+  abstract public Proc procEntryExit3(Assem.InstrList body);
+  abstract public String tempMap(Temp.Temp temp);
+  abstract public Assem.InstrList codegen(Tree.Stm stm);
 }
